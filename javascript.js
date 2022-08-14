@@ -1,8 +1,7 @@
 
-let choices = ['rock', 'paper', 'scissors'];
-
 function getComputerChoice() {
-    let computerChoice =  choices[Math.floor(Math.random() * choices.length)];
+    let computerChoices = ['rock', 'paper', 'scissors'];
+    let computerChoice =  computerChoices[Math.floor(Math.random() * computerChoices.length)];
     return computerChoice;
 }
 
@@ -59,32 +58,42 @@ function game() {
             console.log(output);
 
 
-                if (output == "You lost! Rock beats scissors.") {
-                    computerScore = ++computerScore;
-                }
-                else if (output == "You lost! Paper beats rock.") {
-                    computerScore = ++computerScore;
-                }
-                else if (output == "You lost! Scissors beats paper.") {
-                    computerScore = ++computerScore;
-                }
-                else if (output == "You won! Paper beats rock.") {
-                    playerScore = ++playerScore;
-                }
-                else if (output == "You won! Scissors beats paper.") {
-                    playerScore == ++playerScore
-                }
-                else if (output == "You won! Rock beats scissors.") {
-                    playerScore == ++playerScore
-                }
-                else {
-                    computerScore = ++computerScore;
-                    playerScore = ++playerScore;
-                }
-            
+            if (output == "You lost! Rock beats scissors.") {
+                computerScore = ++computerScore;
+            }
+            else if (output == "You lost! Paper beats rock.") {
+                computerScore = ++computerScore;
+            }
+            else if (output == "You lost! Scissors beats paper.") {
+                computerScore = ++computerScore;
+            }
+            else if (output == "You won! Paper beats rock.") {
+                playerScore = ++playerScore;
+            }
+            else if (output == "You won! Scissors beats paper.") {
+                playerScore == ++playerScore
+            }
+            else if (output == "You won! Rock beats scissors.") {
+                playerScore == ++playerScore
+            }
+            else {
+                computerScore = ++computerScore;
+                playerScore = ++playerScore;
+            }
+        
 
             console.log("Player Score:", playerScore);
             console.log("Computer Score:",computerScore);
 
         }
+    
+    if (computerScore > playerScore) {
+        console.log("Sorry, You lost the game.")
+    }
+    else if (playerScore > computerScore) {
+        console.log("Congratulations! You won the game.")
+    }
+    else {
+        console.log("Game tied.")
+    }
 }
