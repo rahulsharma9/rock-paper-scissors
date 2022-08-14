@@ -43,15 +43,48 @@ function play() {
         play();
     }
     return result;
+
+
 }
+
 
 function game() {
 
-    for(i = 0; i < 5; i++) {
-    const output = play();
-    console.log(output);
-    }
+    let computerScore = 0;
+    let playerScore = 0;
+
+        for(i = 0; i < 5; i++) {
+
+            output = play();
+            console.log(output);
+
+
+                if (output == "You lost! Rock beats scissors.") {
+                    computerScore = ++computerScore;
+                }
+                else if (output == "You lost! Paper beats rock.") {
+                    computerScore = ++computerScore;
+                }
+                else if (output == "You lost! Scissors beats paper.") {
+                    computerScore = ++computerScore;
+                }
+                else if (output == "You won! Paper beats rock.") {
+                    playerScore = ++playerScore;
+                }
+                else if (output == "You won! Scissors beats paper.") {
+                    playerScore == ++playerScore
+                }
+                else if (output == "You won! Rock beats scissors.") {
+                    playerScore == ++playerScore
+                }
+                else {
+                    computerScore = ++computerScore;
+                    playerScore = ++playerScore;
+                }
+            
+
+            console.log("Player Score:", playerScore);
+            console.log("Computer Score:",computerScore);
+
+        }
 }
-
-game()
-
