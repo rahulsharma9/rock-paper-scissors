@@ -18,28 +18,29 @@ function play() {
     const playerSelection = getPlayerChoice();
 
     if (computerSelection === playerSelection) {
-        result = console.log("It's a tie!");
+        result = "It's a tie!";
     }
     else if (computerSelection === 'rock' && playerSelection === 'scissors') {
-        result = "The computer scored a point. Rock beats scissors.";
+        result = "You lost! Rock beats scissors.";
     }
     else if (computerSelection === 'rock' && playerSelection === 'paper') {
-        result = "You scored a point. Paper beats rock.";
+        result = "You won! Paper beats rock.";
     }
     else if (computerSelection === 'paper' && playerSelection === 'rock') {
-        result = "The computer scored a point. Paper beats rock.";
+        result = "You lost! Paper beats rock.";
     }
     else if (computerSelection === 'paper' && playerSelection === 'scissors') {
-        result = "You scored a point. Scissors beats paper.";
+        result = "You won! Scissors beats paper.";
     }
     else if (computerSelection === 'scissors' && playerSelection === 'paper') {
-        result = "The computer scored a point. Scissors beats paper.";
+        result = "You lost! Scissors beats paper.";
     }
     else if (computerSelection === 'scissors' && playerSelection === 'rock') {
-        result = "You scored a point. Rock beats scissors.";
+        result = "You won! Rock beats scissors.";
     }
     else {
-        result = "You can only pick one from: rock, paper, or scissors. Please try again."
+        result = console.log("You can only pick one from: rock, paper, or scissors. Please try again.");
+        play();
     }
     return result;
 }
@@ -53,3 +54,4 @@ function game() {
 }
 
 game()
+
