@@ -7,4 +7,6 @@ The play function compares the player's selection to the computer's selection to
 
 The game function allows the game to run for five rounds. 
 
-Also, the game function updates the computer score and player score according to the winner of the round. Finally, the program compares the computer score to the player score to declare a winner or tie. 
+Also, the game function updates the computer score and player score according to the winner of the round. 
+
+Finally, the program compares the computer score to the player score to declare a winner or tie. 
